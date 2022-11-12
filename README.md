@@ -26,14 +26,6 @@ $ yarn
 - Create `.env` file for environment variables. `.env-sample` are the required environment variables.
 - Run in **development** mode.
 
-Run in **android**
-
 ```bash
-$ yarn android
-```
-
-Run in **ios**
-
-```bash
-$ yarn ios
+$ yarn dev:android | yarn dev:ios
 ```
