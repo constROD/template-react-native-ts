@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "setup": "cat .nvmrc | xargs nvm use",
     "dev:android": "react-native run-android",
     "dev:ios": "react-native run-ios",
     "start": "react-native start",
