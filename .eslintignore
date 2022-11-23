@@ -6,7 +6,6 @@ Dockerfile
 jest.*.ts
 *.config.js
 *.config.ts
-*.html
 
 # Caches
 .eslintcache
@@ -25,6 +24,7 @@ dist
 .env.*
 .npmrc
 *-lock.json
+*-lock.yaml
 *.lock
 .idea
 *.suo
@@ -36,11 +36,8 @@ dist
 # Logs
 logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+*-debug.log*
+*-error.log*
 
 # Types
 
