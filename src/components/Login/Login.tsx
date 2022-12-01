@@ -1,5 +1,6 @@
+import { Button } from '@rneui/themed';
 import React from 'react';
-import { Button, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { useNavigate } from 'react-router-native';
 import { ROUTES } from 'shared/constants/Routes';
 import { useUserStore } from 'shared/store';
