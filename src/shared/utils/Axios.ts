@@ -1,7 +1,5 @@
-import LocalStorageUtil from './LocalStorage';
-
 import axios, { AxiosResponse } from 'axios';
-import { HTTP_RESPONSES, HttpResponseType, Code } from 'shared/constants/Http';
+import { Code, HttpResponseType, HTTP_RESPONSES } from 'shared/constants/Http';
 // import { AuthLocalStorage } from 'shared/constants/LocalStorage';
 import { IHttpOptions, IHttpRequest, IHttpResponse } from 'shared/interfaces/Http';
 
@@ -32,7 +30,7 @@ PrivateInstance.interceptors.response.use(
     }
 
     if (err.response.data.code === Code.Unauthorized) {
-      LocalStorageUtil.clear();
+      // Clear session
     }
 
     return Promise.reject({ ...err.response, ...defaultError(err.response.data) });

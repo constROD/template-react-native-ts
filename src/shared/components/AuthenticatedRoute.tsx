@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, useLocation, Outlet } from 'react-router-native';
+import { Navigate, Outlet, useLocation } from 'react-router-native';
 import { ROUTES } from 'shared/constants/Routes';
 import { useUserStore } from 'shared/store';
 

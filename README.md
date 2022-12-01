@@ -3,7 +3,8 @@
 ## Prerequisites
 
 - Download extension **ESLint** and **Prettier - Code formatter** in your VSCode.
-- Install **node** >= v16.13.0
+- Install **node** >= 16.13.0
+- Install **pnpm** >= 7.17.0
 
 - **(Required for MacOSX):** Run this to give permission husky to run pre-commit hook.
 
@@ -18,14 +19,17 @@ $ chmod ug+x .git/hooks/*
 $ nvm use or nvm use 16.13.0
 ```
 
-- Install Dependencies.
+- Create `.env` file and refer to `.env-sample` file for the required secrets.
+
+## Without Docker
+
+- Install dependencies.
 
 ```bash
-$ pnpm install
+$ pnpm i
 ```
 
-- Create `.env` file for environment variables. `.env-sample` are the required environment variables.
-- Run in **development** mode.
+**Development Mode:**
 
 ```bash
 $ pnpm dev:android | pnpm dev:ios
