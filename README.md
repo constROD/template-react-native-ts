@@ -21,8 +21,6 @@ $ nvm use or nvm use 16.13.0
 
 - Create `.env` file and refer to `.env-sample` file for the required secrets.
 
-## Without Docker
-
 - Install dependencies.
 
 ```bash
