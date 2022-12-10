@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { Code, HttpResponseType, HTTP_RESPONSES } from 'shared/constants/Http';
 // import { AuthLocalStorage } from 'shared/constants/LocalStorage';
-import { IHttpOptions, IHttpRequest, IHttpResponse } from 'shared/interfaces/Http';
+import { IHttpOptions, IHttpRequest, IHttpResponse } from 'shared/types/Http';
 
 const PrivateInstance = axios.create();
 const PublicInstance = axios.create();
