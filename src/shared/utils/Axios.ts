@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { Code, HttpResponseType, HTTP_RESPONSES } from 'shared/constants/Http';
 // import { AuthLocalStorage } from 'shared/constants/LocalStorage';
-import { IHttpOptions, IHttpRequest, IHttpResponse } from 'shared/types/Http';
+import { HttpOptions, HttpRequest, HttpResponse } from 'shared/types/Http';
 
 const PrivateInstance = axios.create();
 const PublicInstance = axios.create();
@@ -49,16 +49,16 @@ PublicInstance.interceptors.response.use(
 );
 
 export const AxiosUtil = async <R = unknown>(
-  request: IHttpRequest,
-  options: IHttpOptions = { isPublic: false }
-): Promise<AxiosResponse<IHttpResponse<R>>> => {
+  request: HttpRequest,
+  options: HttpOptions = { isPublic: false }
+): Promise<AxiosResponse<HttpResponse<R>>> => {
   try {
     const { isPublic } = options;
     const instance = isPublic ? PublicInstance : PrivateInstance;
     const data = await instance({ ...request, data: request.body });
     return data;
   } catch (err) {
-    const error = err as AxiosResponse<IHttpResponse<R>>;
+    const error = err as AxiosResponse<HttpResponse<R>>;
     return error;
   }
 };
