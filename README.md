@@ -19,16 +19,17 @@ $ chmod ug+x .git/hooks/*
 $ nvm use or nvm use 16.13.0
 ```
 
-- Create `.env` file and refer to `.env-sample` file for the required secrets.
+- Create `.env` file.
+- and refer to the `sample.<secret-file>.txt` for the required variables.
 
 - Install dependencies.
 
 ```bash
-$ pnpm i
+pnpm i
 ```
 
 **Development Mode:**
 
 ```bash
-$ pnpm dev:android | pnpm dev:ios
+pnpm dev:android | pnpm dev:ios
 ```
