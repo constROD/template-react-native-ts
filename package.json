@@ -48,6 +48,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
+    "@changesets/cli": "^2.26.0",
     "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.2.0",
     "@react-native-community/cli-platform-android": "^9.3.1",
