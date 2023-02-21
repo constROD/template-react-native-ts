@@ -1,6 +1,6 @@
-type StoreResponse<T = any> = {
+type StoreResponse<T = unknown> = {
   data: T;
-  error: any | null;
+  error: unknown | null;
 } | void;
 
 export interface TestStore {

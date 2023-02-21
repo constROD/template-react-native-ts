@@ -1,10 +1,23 @@
 {
   "name": "TemplateReactNativeTS",
   "version": "0.0.1",
-  "private": true,
+  "repository": "https://github.com/constrod/template-react-native-ts",
+  "bugs": {
+    "url": "https://github.com/constrod/template-react-native-ts/issues"
+  },
+  "contributors": [
+    {
+      "name": "Rodrick Alcantara",
+      "url": "https://github.com/constROD"
+    }
+  ],
+  "description": "Custom Template for React Native TypeScript",
+  "author": "Rodrick Alcantara <rialcantara21@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "install:pod": "pnpx pod-install",
     "clean": "rm -rf /tmp/metro-*",
+    "release": "changeset tag",
     "dev:android": "react-native run-android",
     "dev:ios": "react-native run-ios",
     "start": "react-native start",

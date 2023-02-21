@@ -1,9 +1,9 @@
 import { Button, Input } from '@rneui/themed';
-import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import { useUserStore } from 'shared/store';
-import { z } from 'zod';
+import { type z } from 'zod';
+import { useGetTodos } from './hooks';
 import { loginSchema } from './validators';
 
 const Login: React.FC = () => {
@@ -31,16 +31,7 @@ const Login: React.FC = () => {
     setValues(prev => ({ ...prev, [name]: value }));
   };
 
-  const params = { start: 0, limit: 10 };
-  const todosQuery = useQuery({
-    queryKey: ['todos', params],
-    queryFn: async () => {
-      const response = await fetch(
-        `https://jsonplaceholder.typicode.com/users?start=${params.start}&limit=${params.limit}`
-      );
-      return response.json();
-    },
-  });
+  const todosQuery = useGetTodos();
 
   if (todosQuery.isLoading)
     return (
@@ -48,8 +39,6 @@ const Login: React.FC = () => {
         <Text>Loading...</Text>
       </View>
     );
-
-  console.log(todosQuery.data);
 
   return (
     <View>

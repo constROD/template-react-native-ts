@@ -1,46 +1,32 @@
-# Dependencies
 node_modules
 
-# Configs
 Dockerfile
 *.config.js
 *.config.ts
 
-# Caches
 .eslintcache
 .vscode
 
-# Testings
-coverage
-
-# Builds
 build
 dist
 
-# Miscellaneous
 .DS_Store
 .env
 .env.*
 .npmrc
+*.tsbuildinfo
+
+!**.example
+
 *-lock.json
 *-lock.yaml
 *.lock
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 
-# Logs
 logs
 *.log
 *-debug.log*
 *-error.log*
 
-# Types
-
-# Ignores
 .dockerignore
 .prettierignore
 .eslintignore
