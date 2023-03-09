@@ -7,8 +7,7 @@ import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NativeRouter, Route, Routes } from 'react-router-native';
 import AuthenticatedRoute from 'shared/components/AuthenticatedRoute';
-import PageLayout from 'shared/components/Layouts/PageLayout';
-import RootLayout from 'shared/components/Layouts/RootLayout';
+import { PageLayout, RootLayout } from 'shared/components/Layouts';
 import { ROUTES } from 'shared/constants/Routes';
 
 const App = () => {

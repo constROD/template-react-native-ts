@@ -3,7 +3,7 @@ import { Text, View } from 'react-native';
 import { Link } from 'react-router-native';
 import { ROUTES } from 'shared/constants/Routes';
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
   return (
     <View>
       <Text>Navbar</Text>
@@ -16,5 +16,3 @@ const Navbar: React.FC = () => {
     </View>
   );
 };
-
-export default Navbar;
