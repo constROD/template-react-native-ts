@@ -1,4 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { PageLayout, RootLayout } from 'modules/Layouts';
+import { PrivateRoute } from 'modules/Partials';
 import AboutPage from 'pages/About';
 import HomePage from 'pages/Home';
 import LoginPage from 'pages/Login';
@@ -6,8 +8,6 @@ import NotFoundPage from 'pages/NotFound';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NativeRouter, Route, Routes } from 'react-router-native';
-import AuthenticatedRoute from 'shared/components/AuthenticatedRoute';
-import { PageLayout, RootLayout } from 'shared/components/Layouts';
 import { ROUTES } from 'shared/constants/Routes';
 
 const App = () => {
@@ -28,7 +28,7 @@ const App = () => {
         <NativeRouter>
           <RootLayout>
             <Routes>
-              <Route element={<AuthenticatedRoute />}>
+              <Route element={<PrivateRoute />}>
                 <Route element={<PageLayout />}>
                   <Route path={ROUTES.HOME} element={<HomePage />} />
                   <Route path={ROUTES.ABOUT} element={<AboutPage />} />

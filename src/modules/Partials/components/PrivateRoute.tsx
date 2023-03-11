@@ -3,7 +3,7 @@ import { Navigate, Outlet, useLocation } from 'react-router-native';
 import { ROUTES } from 'shared/constants/Routes';
 import { useUserStore } from 'shared/store';
 
-const AuthenticatedRoute: React.FC = () => {
+export const PrivateRoute: React.FC = () => {
   const location = useLocation();
   const isSignedIn = useUserStore(state => state.computed.isSignedIn);
 
@@ -11,5 +11,3 @@ const AuthenticatedRoute: React.FC = () => {
 
   return <Outlet />;
 };
-
-export default AuthenticatedRoute;
