@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate, Outlet, useLocation } from 'react-router-native';
-import { ROUTES } from 'shared/constants/routess';
+import { ROUTES } from 'shared/constants/routes';
 import { useUserStore } from 'shared/store';
 
 export const PrivateRoute: React.FC = () => {

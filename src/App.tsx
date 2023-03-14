@@ -8,7 +8,7 @@ import NotFoundPage from 'pages/NotFound';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NativeRouter, Route, Routes } from 'react-router-native';
-import { ROUTES } from 'shared/constants/routess';
+import { ROUTES } from 'shared/constants/routes';
 
 const App = () => {
   const [queryClient] = React.useState(

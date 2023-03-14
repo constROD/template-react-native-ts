@@ -1,7 +1,7 @@
+import { STAGE } from '@env';
 import { Button, Input } from '@rneui/themed';
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
-import { STAGE } from 'shared/constants/environments';
 import { useUserStore } from 'shared/store';
 import { type z } from 'zod';
 import { useGetTodos } from './hooks';

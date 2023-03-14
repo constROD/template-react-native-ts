@@ -16,11 +16,12 @@
   "license": "MIT",
   "scripts": {
     "install:pod": "pnpx pod-install",
-    "clean": "rm -rf /tmp/metro-*",
+    "clean": "rm -rf /tmp/metro-* && rm -rf ./node_modules/.cache/babel-loader",
     "release": "changeset tag",
     "dev:android": "react-native run-android",
     "dev:ios": "react-native run-ios",
     "start": "react-native start",
+    "encode:env": "cat .env | base64 -w 0 > .env-encoded",
     "format": "prettier --write ./src/**/*.ts{,x}",
     "lint": "eslint ./src --ext .js,.ts,.jsx,.tsx",
     "lint:fix": "eslint ./src --fix --ext .js,.ts,.jsx,.tsx",
