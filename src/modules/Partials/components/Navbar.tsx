@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { Link } from 'react-router-native';
-import { ROUTES } from 'shared/constants/Routes';
+import { ROUTES } from 'shared/constants/routess';
 
 export const Navbar: React.FC = () => {
   return (

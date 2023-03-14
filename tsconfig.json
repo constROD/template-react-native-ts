@@ -17,7 +17,8 @@
     "jsx": "preserve",
     "incremental": true,
     "noUncheckedIndexedAccess": true,
-    "types": ["react-native"]
+    "types": ["react-native"],
+    "typeRoots": ["./node_modules/@types", "./src/@types"]
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"],
   "exclude": ["./node_modules", "./babel.config.js", "./metro.config.js"]

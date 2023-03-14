@@ -1,10 +1,11 @@
 import { Button, Input } from '@rneui/themed';
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
+import { STAGE } from 'shared/constants/environments';
 import { useUserStore } from 'shared/store';
 import { type z } from 'zod';
 import { useGetTodos } from './hooks';
-import { loginSchema } from './validators';
+import { loginSchema } from './validations';
 
 const Login: React.FC = () => {
   const defaultValues: z.infer<typeof loginSchema> = {
@@ -17,14 +18,10 @@ const Login: React.FC = () => {
   const login = useUserStore(state => state.login);
 
   const handleLogin = () => {
-    const isValid = loginSchema.safeParse(values);
-
-    if (!isValid.success) {
-      console.log({ error: isValid.error });
-    } else {
-      console.log({ data: isValid.data });
-      login();
-    }
+    const validated = loginSchema.safeParse(values);
+    // eslint-disable-next-line no-console
+    if (!validated.success) return console.debug({ error: validated.error });
+    login();
   };
 
   const handleChange = (name: 'email' | 'password', value: string) => {
@@ -42,7 +39,7 @@ const Login: React.FC = () => {
 
   return (
     <View>
-      <Text>This is LoginPage</Text>
+      <Text>This is LoginPage env: {STAGE}</Text>
       <Input
         placeholder="Email"
         value={values.email}
