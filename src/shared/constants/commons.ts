@@ -1,3 +1,9 @@
+export const ROUTES = {
+  HOME: '/',
+  ABOUT: '/about',
+  LOGIN: '/login',
+} as const;
+
 export const DEFAULT_ASSET_DOMAIN = '/assets' as const;
 
 /**

@@ -1,7 +1,7 @@
-import Login from 'modules/Login';
+import Login from 'modules/logins';
 import React from 'react';
 import { Navigate } from 'react-router-native';
-import { ROUTES } from 'shared/constants/routes';
+import { ROUTES } from 'shared/constants/commons';
 import { useUserStore } from 'shared/store';
 
 const LoginPage: React.FC = () => {

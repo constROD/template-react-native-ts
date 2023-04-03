@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AsyncAbout = React.lazy(() => import('modules/About'));
+const AsyncAbout = React.lazy(() => import('modules/abouts'));
 
 const AboutPage: React.FC = () => {
   return <AsyncAbout />;

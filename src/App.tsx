@@ -1,14 +1,14 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { PageLayout, RootLayout } from 'modules/Layouts';
-import { PrivateRoute } from 'modules/Partials';
-import AboutPage from 'pages/About';
-import HomePage from 'pages/Home';
-import LoginPage from 'pages/Login';
-import NotFoundPage from 'pages/NotFound';
+import { PageLayout, RootLayout } from 'modules/layoutss';
+import { PrivateRoute } from 'modules/partialss';
+import AboutPage from 'pages/abouts';
+import HomePage from 'pages/homes';
+import LoginPage from 'pages/logins';
+import NotFoundPage from 'pages/not-found';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NativeRouter, Route, Routes } from 'react-router-native';
-import { ROUTES } from 'shared/constants/routes';
+import { ROUTES } from 'shared/constants/commons';
 
 const App = () => {
   const [queryClient] = React.useState(
