@@ -1,5 +1,5 @@
 import { Button } from '@rneui/themed';
-import { Footer, Navbar } from 'modules/Partials';
+import { Footer, Navbar } from 'modules/partials';
 import React, { Suspense } from 'react';
 import { Text, View } from 'react-native';
 import { Outlet } from 'react-router-native';

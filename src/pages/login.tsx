@@ -1,4 +1,4 @@
-import Login from 'modules/logins';
+import Login from 'modules/login';
 import React from 'react';
 import { Navigate } from 'react-router-native';
 import { ROUTES } from 'shared/constants/commons';

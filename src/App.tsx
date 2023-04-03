@@ -1,9 +1,9 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { PageLayout, RootLayout } from 'modules/layoutss';
-import { PrivateRoute } from 'modules/partialss';
-import AboutPage from 'pages/abouts';
+import { PageLayout, RootLayout } from 'modules/layouts';
+import { PrivateRoute } from 'modules/partials';
+import AboutPage from 'pages/about';
 import HomePage from 'pages/homes';
-import LoginPage from 'pages/logins';
+import LoginPage from 'pages/login';
 import NotFoundPage from 'pages/not-found';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
