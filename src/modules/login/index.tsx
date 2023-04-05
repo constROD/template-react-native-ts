@@ -39,7 +39,7 @@ const Login: React.FC = () => {
 
   return (
     <View>
-      <Text>This is LoginPage env: {STAGE}</Text>
+      <Text className="text-red-500">This is LoginPage env: {STAGE}</Text>
       <Input
         placeholder="Email"
         value={values.email}

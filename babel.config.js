@@ -19,5 +19,6 @@ module.exports = {
         path: '.env',
       },
     ],
+    'nativewind/babel',
   ],
 };
