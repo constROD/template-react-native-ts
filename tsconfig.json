@@ -20,6 +20,6 @@
     "types": ["react-native"],
     "typeRoots": ["./node_modules/@types", "./src/@types"]
   },
-  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "include": ["./src"],
   "exclude": ["./node_modules", "./babel.config.js", "./metro.config.js"]
 }
